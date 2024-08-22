@@ -22,25 +22,39 @@ public class UsandoListas {
         String elemento = minhaLista.get( 2 );
         System.out.println( elemento );
         
-        minhaLista.add( 2, "desinfetante" );
+        minhaLista.add( 2, "desinfetante" ); // add = move as posiçoes INSERIR e os demais sao mudados de posiçao
         
         elemento = minhaLista.get( 2 );
         System.out.println( elemento );
         elemento = minhaLista.get( 3 );
         System.out.println( elemento );
         
-        boolean encontrou = minhaLista.contains( "vassoura" );
+        boolean encontrou = minhaLista.contains( "vassoura" ); // contains = ele diz se contem ou nao um elemento na lista
         System.out.println("Encontrou vassoura? " + encontrou );
         
         encontrou = minhaLista.contains( "leite" );
         System.out.println("Encontrou leite? " + encontrou);
         
-        int indice = minhaLista.indexOf( "presunto" ); // indexof = procura em que numero o produto esta
+        int indice = minhaLista.indexOf( "presunto" ); // indexof = procura/indica em que numero o produto esta
         System.out.println("Indice de presunto: " + indice); 
         
         indice = minhaLista.indexOf( "batata" );
         System.out.println("Indice de batata: " + indice); // caso nao tenha aparece -1
         
+        boolean removeuPao = minhaLista.remove("pao");
+        System.out.println( "Removeu o pao? " +removeuPao );
+        elemento = minhaLista.get( 3 );
+        System.out.println( elemento );
+        
+        minhaLista.remove( 1 );
+        elemento = minhaLista.get( 1 );
+        System.out.println( elemento );
+        
+       boolean removeuCafe = minhaLista.remove("cafe");
+       System.out.println( "Removeu o cafe? " +removeuCafe );
+        
     }
     
 }
+
+        
