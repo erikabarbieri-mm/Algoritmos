@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+import java.util.ArrayList;
+
+public class UsandoListas {
+
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        ArrayList< String > minhaLista = new ArrayList();
+        
+        int numElementos = minhaLista.size();
+        System.out.println("Numero de elementos: " + numElementos);
+        
+        boolean estaVazia = minhaLista.isEmpty(); // isEmpty é para dizer se a lista está ou não vazia, quando estiver = true, quando nao estiveer false.
+        System.out.println("Esta vazia? " + estaVazia );
+        
+        minhaLista.add( "banana" ); // add = adicionar no final da lista
+        minhaLista.add( "leite" );
+        minhaLista.add( "pao" );
+        minhaLista.add( "presunto" );
+        
+        String elemento = minhaLista.get( 2 );
+        System.out.println( elemento );
+        
+        minhaLista.add( 2, "desinfetante" );
+        
+        elemento = minhaLista.get( 2 );
+        System.out.println( elemento );
+        elemento = minhaLista.get( 3 );
+        System.out.println( elemento );
+        
+        boolean encontrou = minhaLista.contains( "vassoura" );
+        System.out.println("Encontrou vassoura? " + encontrou );
+        
+        encontrou = minhaLista.contains( "leite" );
+        System.out.println("Encontrou leite? " + encontrou);
+        
+        int indice = minhaLista.indexOf( "presunto" ); // indexof = procura em que numero o produto esta
+        System.out.println("Indice de presunto: " + indice); 
+        
+        indice = minhaLista.indexOf( "batata" );
+        System.out.println("Indice de batata: " + indice); // caso nao tenha aparece -1
+        
+    }
+    
+}
